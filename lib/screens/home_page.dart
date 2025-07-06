@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:habitly/constants/colors.dart';
 import 'package:habitly/widgets/my_app_bar.dart';
+import 'package:habitly/widgets/my_circular_icon.dart';
 import 'package:habitly/widgets/my_container.dart';
 import 'package:habitly/widgets/week_progress.dart';
 
@@ -35,13 +36,7 @@ class HomePage extends StatelessWidget {
                       children: [
                         Row(
                           children: [
-                            CircleAvatar(
-                              backgroundColor: Color(0xffDBEAFE),
-                              child: Icon(
-                                Icons.arrow_right_alt_rounded,
-                                color: Color(0xff3B82F6),
-                              ),
-                            ),
+                            MyCircleIcon(),
                           ],
                         ),
                       ],
@@ -56,3 +51,5 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+
