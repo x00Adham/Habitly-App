@@ -32,6 +32,7 @@ class HomePage extends StatelessWidget {
                     Text("75%", style: TextStyle(color: mygray)),
                   ],
                 ),
+                SizedBox(height: 4),
                 CustomBarChart(),
               ],
             ),
