@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habitly/constants/colors.dart';
+import 'package:habitly/widgets/custom_bar_chart.dart';
 import 'package:habitly/widgets/my_app_bar.dart';
 import 'package:habitly/widgets/my_container.dart';
 
@@ -16,11 +17,7 @@ class HomePage extends StatelessWidget {
           children: [
             MyAppBar(),
             SizedBox(height: 20),
-            MyContainer(
-              children: [
-                
-              ],
-            ),
+            MyContainer(children: [CustomBarChart()]),
           ],
         ),
       ),
