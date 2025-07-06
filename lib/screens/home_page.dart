@@ -17,9 +17,24 @@ class HomePage extends StatelessWidget {
           children: [
             MyAppBar(),
             SizedBox(height: 20),
-            MyContainer(children: [
-              Text("Weekly Progress"),
-              CustomBarChart()]),
+            MyContainer(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Weekly Progress",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text("75%", style: TextStyle(color: mygray)),
+                  ],
+                ),
+                CustomBarChart(),
+              ],
+            ),
           ],
         ),
       ),

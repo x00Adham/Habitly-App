@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:habitly/constants/colors.dart';
 import 'package:habitly/screens/home_page.dart';
 
@@ -9,9 +10,12 @@ void main() {
 class HabitlyApp extends StatelessWidget {
   const HabitlyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    // Hide Android navigation bar
+    WidgetsFlutterBinding.ensureInitialized();
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Habitly',
