@@ -17,7 +17,9 @@ class HomePage extends StatelessWidget {
           children: [
             MyAppBar(),
             SizedBox(height: 20),
-            MyContainer(children: [CustomBarChart()]),
+            MyContainer(children: [
+              Text("Weekly Progress"),
+              CustomBarChart()]),
           ],
         ),
       ),

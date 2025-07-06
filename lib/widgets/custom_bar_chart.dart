@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habitly/constants/colors.dart';
 
 class CustomBarChart extends StatelessWidget {
   final List<double> weeklyData = [0.8, 0.9, 1.0, 0.6, 0.85, 0.7, 0.5];
@@ -22,10 +23,7 @@ class CustomBarChart extends StatelessWidget {
                 height: weeklyData[index] * 60,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [
-                      Color.fromARGB(255, 129, 181, 248),
-                      Color(0xFF7C5CFF),
-                    ],
+                    colors: [myblue, mypink],
                     begin: Alignment.bottomCenter,
                     end: Alignment.topCenter,
                   ),

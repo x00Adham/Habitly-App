@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habitly/constants/colors.dart';
 
 class MyAppBar extends StatelessWidget {
   const MyAppBar({super.key});
@@ -34,9 +35,9 @@ class MyAppBar extends StatelessWidget {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               gradient: LinearGradient(
-                colors: [Color.fromARGB(255, 129, 181, 248), Color(0xFF7C5CFF)],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
+                colors: [mypink, myblue],
+                begin: Alignment.centerRight,
+                end: Alignment.centerLeft,
               ),
             ),
             child: Icon(Icons.person, size: 25, color: Colors.white),
