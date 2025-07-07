@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:habitly/constants/colors.dart';
+import 'package:habitly/screens/add_habit_page.dart';
 import 'package:habitly/screens/home_page.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class HabitlyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Habitly',
       theme: ThemeData(fontFamily: 'Inter', primaryColor: maincolor),
-      home: const HomePage(),
+      home: const AddHabitPage(),
     );
   }
 }

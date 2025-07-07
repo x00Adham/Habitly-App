@@ -15,11 +15,15 @@ class MyCircleIcon extends StatelessWidget {
         // Handle the case where the name is not found.
         // For now, let's throw an error.
         // Alternatively, you could return a default IconModel.
-        throw ArgumentError('IconModel with name "$name" not found in iconsList.');
+        throw ArgumentError(
+          'IconModel with name "$name" not found in iconsList.',
+        );
       },
     );
 
     return CircleAvatar(
+      foregroundColor: Colors.transparent,
+
       backgroundColor: iconModel.backgroundColor,
       child: Icon(iconModel.icon, color: iconModel.iconColor),
     );
