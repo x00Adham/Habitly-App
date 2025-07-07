@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:habitly/constants/colors.dart';
+import 'package:habitly/widgets/custom_floating_button.dart';
+
 import 'package:habitly/widgets/listview_of_habits.dart';
 import 'package:habitly/widgets/my_app_bar.dart';
 
@@ -11,6 +13,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: CustomFloatingButton(onTap: () {}),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       backgroundColor: maincolor,
       body: Padding(
         padding: const EdgeInsets.all(20),
