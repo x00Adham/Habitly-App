@@ -10,7 +10,7 @@ class IconsGrid extends StatefulWidget {
 }
 
 class _IconsGridState extends State<IconsGrid> {
-  final bool isSelected = false;
+  int? selectedIndex;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class _IconsGridState extends State<IconsGrid> {
           return GestureDetector(
             onTap: () {
               setState(() {
-                isSelected ? false : true;
+                selectedIndex = index;
               });
             },
             child: Padding(
@@ -36,7 +36,10 @@ class _IconsGridState extends State<IconsGrid> {
               child: Container(
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: isSelected ? iconcolors[index] : Colors.transparent,
+                    color:
+                        selectedIndex == index
+                            ? iconcolors[index]
+                            : Colors.transparent,
                     width: 2,
                   ),
                   shape: BoxShape.circle,

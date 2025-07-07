@@ -31,8 +31,6 @@ class _AddHabitPageState extends State<AddHabitPage> {
                   "Habit Name",
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
                 ),
-
-                SizedBox(height: 10),
                 SizedBox(height: 10),
                 MyTextField(),
                 SizedBox(height: 20),
