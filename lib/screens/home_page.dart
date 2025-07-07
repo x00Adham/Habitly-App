@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habitly/constants/colors.dart';
-import 'package:habitly/constants/icons_list.dart';
-import 'package:habitly/widgets/hapit_widget.dart';
+import 'package:habitly/widgets/listview_of_habits.dart';
 import 'package:habitly/widgets/my_app_bar.dart';
 
 import 'package:habitly/widgets/week_progress.dart';
@@ -27,21 +26,10 @@ class HomePage extends StatelessWidget {
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
             ),
             SizedBox(height: 5),
-            Expanded(
-              child: ListView.builder(
-                itemCount: iconsList.length,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 5),
-                    child: HabitWidget(),
-                  );
-                },
-              ),
-            ),
+            listveiwOfHabits(),
           ],
         ),
       ),
     );
   }
 }
-
