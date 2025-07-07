@@ -2,7 +2,7 @@
 import 'package:habitly/constants/icons_list.dart';
 import 'package:habitly/widgets/hapit_widget.dart';
 
-Expanded listveiwOfHabits() {
+ listveiwOfHabits() {
     return Expanded(
             child: ListView.builder(
               itemCount: iconsList.length,
