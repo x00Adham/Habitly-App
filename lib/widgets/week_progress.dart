@@ -11,6 +11,8 @@ class WeekProgress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MyContainer(
+      paddingH: 20,
+      paddingV: 20,
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

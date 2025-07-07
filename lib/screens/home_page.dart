@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:habitly/constants/colors.dart';
 import 'package:habitly/constants/icons_list.dart';
-import 'package:habitly/models/icon_model.dart';
+import 'package:habitly/widgets/hapit_widget.dart';
 import 'package:habitly/widgets/my_app_bar.dart';
-import 'package:habitly/widgets/my_circular_icon.dart';
-import 'package:habitly/widgets/my_container.dart';
+
 import 'package:habitly/widgets/week_progress.dart';
 
 class HomePage extends StatelessWidget {
@@ -32,22 +31,9 @@ class HomePage extends StatelessWidget {
               child: ListView.builder(
                 itemCount: iconsList.length,
                 itemBuilder: (context, index) {
-                  late IconModel icon = iconsList[index];
                   return Padding(
                     padding: const EdgeInsets.symmetric(vertical: 5),
-                    child: MyContainer(
-                      children: [
-                        Row(
-                          children: [
-                            MyCircleIcon(
-                              backgroundColor: icon.backgroundColor,
-                              icon: icon.icon,
-                              iconColor: icon.iconColor,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
+                    child: HabitWidget(),
                   );
                 },
               ),
@@ -58,3 +44,4 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+

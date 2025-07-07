@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class MyContainer extends StatelessWidget {
-  const MyContainer({super.key, required this.children});
+  const MyContainer({super.key, required this.children, required this.paddingH, required this.paddingV});
   final List<Widget> children;
+  final double paddingH;
+  final double paddingV;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class MyContainer extends StatelessWidget {
         ],
       ),
       child: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: EdgeInsets.symmetric(horizontal: paddingH,vertical: paddingV),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [...children],
