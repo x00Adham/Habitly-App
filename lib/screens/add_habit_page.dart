@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:habitly/constants/daylist.dart';
 import 'package:habitly/constants/frequency_list.dart';
 import 'package:habitly/constants/icon_name_list.dart';
+import 'package:habitly/widgets/days_of_week_widger.dart';
 import 'package:habitly/widgets/frequency_widget.dart';
 import 'package:habitly/widgets/icons_grid.dart';
 import 'package:habitly/widgets/my_circular_icon.dart';
@@ -48,8 +50,8 @@ class _AddHabitPageState extends State<AddHabitPage> {
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
                 ),
                 SizedBox(height: 5),
-
                 FrequencyWidget(),
+                DaysOfWeekWidget(),
               ],
             ),
           ],
@@ -58,3 +60,4 @@ class _AddHabitPageState extends State<AddHabitPage> {
     );
   }
 }
+

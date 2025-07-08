@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habitly/constants/colors.dart';
 import 'package:habitly/constants/frequency_list.dart';
 
 class FrequencyWidget extends StatefulWidget {
@@ -27,10 +28,10 @@ class _FrequencyWidgetState extends State<FrequencyWidget> {
               child: Container(
                 height: 40,
                 decoration: BoxDecoration(
-                  color: isSelected ? Colors.blue : Colors.grey.shade200,
+                  color: isSelected ? myclickcolor : Colors.grey.shade200,
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
-                    color: isSelected ? Colors.blue : Colors.transparent,
+                    color: isSelected ? myclickcolor : Colors.transparent,
                     width: 2,
                   ),
                 ),
@@ -40,6 +41,7 @@ class _FrequencyWidgetState extends State<FrequencyWidget> {
                   style: TextStyle(
                     color: isSelected ? Colors.white : Colors.grey.shade600,
                     fontWeight: FontWeight.w500,
+                    fontSize: 16,
                   ),
                 ),
               ),
