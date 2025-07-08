@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:habitly/constants/daylist.dart';
-import 'package:habitly/constants/frequency_list.dart';
-import 'package:habitly/constants/icon_name_list.dart';
+import 'package:flutter_switch/flutter_switch.dart';
+import 'package:habitly/constants/colors.dart';
 import 'package:habitly/widgets/days_of_week_widger.dart';
 import 'package:habitly/widgets/frequency_widget.dart';
 import 'package:habitly/widgets/icons_grid.dart';
-import 'package:habitly/widgets/my_circular_icon.dart';
 import 'package:habitly/widgets/my_container.dart';
 import 'package:habitly/widgets/my_text_field.dart';
 import 'package:habitly/widgets/new_habit_bar.dart';
-import 'package:toggle_switch/toggle_switch.dart';
+import 'package:habitly/widgets/reminder_widget.dart';
 
 class AddHabitPage extends StatefulWidget {
   const AddHabitPage({super.key});
-
+  // Removed reminderEnabled from here
   @override
   State<AddHabitPage> createState() => _AddHabitPageState();
 }
@@ -27,7 +25,7 @@ class _AddHabitPageState extends State<AddHabitPage> {
         child: Column(
           children: [
             NewHabitBar(),
-            SizedBox(height: 30),
+            SizedBox(height: 20),
             MyContainer(
               paddingH: 20,
               paddingV: 20,
@@ -52,6 +50,7 @@ class _AddHabitPageState extends State<AddHabitPage> {
                 SizedBox(height: 5),
                 FrequencyWidget(),
                 DaysOfWeekWidget(),
+                ReminderWidget(),
               ],
             ),
           ],
@@ -60,4 +59,3 @@ class _AddHabitPageState extends State<AddHabitPage> {
     );
   }
 }
-
