@@ -65,6 +65,9 @@ class _ReminderWidgetState extends State<ReminderWidget> {
                     sunset: TimeOfDay(hour: 18, minute: 0),
                     duskSpanInMinutes: 120,
                     onChange: _onTimeChanged,
+                    iosStylePicker: true,
+                    cancelStyle: TextStyle(color: myclickcolor, fontSize: 16),
+                    okStyle: TextStyle(color: myclickcolor, fontSize: 16),
                   ),
                 );
               },
