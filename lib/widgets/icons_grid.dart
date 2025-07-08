@@ -15,10 +15,10 @@ class _IconsGridState extends State<IconsGrid> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 120,
+      height: 60,
       child: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 5,
+          crossAxisCount: 6,
           childAspectRatio: 1,
         ),
         itemCount: iconname.length,
@@ -31,21 +31,18 @@ class _IconsGridState extends State<IconsGrid> {
                 selectedIndex = index;
               });
             },
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 4.0),
-              child: Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color:
-                        selectedIndex == index
-                            ? iconcolors[index]
-                            : Colors.transparent,
-                    width: 2,
-                  ),
-                  shape: BoxShape.circle,
+            child: Container(
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color:
+                      selectedIndex == index
+                          ? iconcolors[index]
+                          : Colors.transparent,
+                  width: 2,
                 ),
-                child: MyCircleIcon(name: iconname[index]),
+                shape: BoxShape.circle,
               ),
+              child: MyCircleIcon(name: iconname[index]),
             ),
           );
         },

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_switch/flutter_switch.dart';
-import 'package:habitly/constants/colors.dart';
+
 import 'package:habitly/widgets/days_of_week_widger.dart';
 import 'package:habitly/widgets/frequency_widget.dart';
 import 'package:habitly/widgets/icons_grid.dart';
@@ -22,38 +21,40 @@ class _AddHabitPageState extends State<AddHabitPage> {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            NewHabitBar(),
-            SizedBox(height: 20),
-            MyContainer(
-              paddingH: 20,
-              paddingV: 20,
-              children: [
-                Text(
-                  "Habit Name",
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-                ),
-                SizedBox(height: 10),
-                MyTextField(),
-                SizedBox(height: 20),
-                Text(
-                  "Choose Icon",
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-                ),
-                SizedBox(height: 10),
-                IconsGrid(),
-                Text(
-                  "Frequency",
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-                ),
-                SizedBox(height: 5),
-                FrequencyWidget(),
-                DaysOfWeekWidget(),
-                ReminderWidget(),
-              ],
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              NewHabitBar(),
+              SizedBox(height: 20),
+              MyContainer(
+                paddingH: 20,
+                paddingV: 20,
+                children: [
+                  Text(
+                    "Habit Name",
+                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                  ),
+                  SizedBox(height: 10),
+                  MyTextField(),
+                  SizedBox(height: 20),
+                  Text(
+                    "Choose Icon",
+                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                  ),
+                  SizedBox(height: 10),
+                  IconsGrid(),
+                  Text(
+                    "Frequency",
+                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                  ),
+                  SizedBox(height: 5),
+                  FrequencyWidget(),
+                  DaysOfWeekWidget(),
+                  ReminderWidget(),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

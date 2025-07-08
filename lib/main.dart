@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:habitly/constants/colors.dart';
 import 'package:habitly/screens/add_habit_page.dart';
-import 'package:habitly/screens/home_page.dart';
 
 void main() {
   runApp(const HabitlyApp());

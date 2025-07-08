@@ -39,25 +39,28 @@ class _DaysOfWeekWidgetState extends State<DaysOfWeekWidget> {
                     }
                   });
                 },
-                child: AnimatedContainer(
-                  duration: Duration(milliseconds: 200),
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color:
-                        isSelected ? myclickcolor : Colors.grey.shade200,
-                    borderRadius: BorderRadius.circular(20),
-                    border:
-                        isWeekend && !isSelected
-                            ? Border.all(color: Colors.grey.shade300)
-                            : null,
-                  ),
-                  child: Center(
-                    child: Text(
-                      DaysOfWeekWidget.dayLabels[index],
-                      style: TextStyle(
-                        color: isSelected ? Colors.white : Colors.grey.shade600,
-                        fontWeight: FontWeight.w500,
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 2),
+                  child: AnimatedContainer(
+                    duration: Duration(milliseconds: 200),
+                    width: 38,
+                    height: 38,
+                    decoration: BoxDecoration(
+                      color: isSelected ? myclickcolor : Colors.grey.shade200,
+                      borderRadius: BorderRadius.circular(20),
+                      border:
+                          isWeekend && !isSelected
+                              ? Border.all(color: Colors.grey.shade300)
+                              : null,
+                    ),
+                    child: Center(
+                      child: Text(
+                        DaysOfWeekWidget.dayLabels[index],
+                        style: TextStyle(
+                          color:
+                              isSelected ? Colors.white : Colors.grey.shade600,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
                     ),
                   ),
