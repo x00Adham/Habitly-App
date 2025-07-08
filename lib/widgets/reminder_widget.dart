@@ -3,7 +3,6 @@ import 'package:day_night_time_picker/lib/state/time.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:habitly/constants/colors.dart';
-import 'package:habitly/widgets/my_text_field.dart';
 
 class ReminderWidget extends StatefulWidget {
   const ReminderWidget({super.key});
@@ -83,7 +82,7 @@ class _ReminderWidgetState extends State<ReminderWidget> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Icon(Icons.alarm, color: myclickcolor, size: 22),
-                    SizedBox(width: 10),
+                    SizedBox(width: 5),
                     Text(
                       "${_time.hourOfPeriod.toString().padLeft(2, '0')}:${_time.minute.toString().padLeft(2, '0')} ${_time.period == DayPeriod.am ? 'AM' : 'PM'}",
                       style: TextStyle(
