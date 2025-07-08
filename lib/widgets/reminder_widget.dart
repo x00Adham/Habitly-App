@@ -70,14 +70,10 @@ class _ReminderWidgetState extends State<ReminderWidget> {
               },
               child: Container(
                 padding: const EdgeInsets.symmetric(
-                  vertical: 10,
+                  vertical: 5,
                   horizontal: 16,
                 ),
-                decoration: BoxDecoration(
-                  color: Colors.grey.shade100,
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: myclickcolor, width: 1),
-                ),
+
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
