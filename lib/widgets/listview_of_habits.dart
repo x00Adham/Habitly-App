@@ -1,10 +1,21 @@
  import 'package:flutter/material.dart';
 import 'package:habitly/constants/icons_list.dart';
 import 'package:habitly/widgets/hapit_widget.dart';
+class ListveiwOfHabits extends StatefulWidget {
+   ListveiwOfHabits({super.key});
+    final ScrollController _scrollController = ScrollController();
 
- listveiwOfHabits() {
+  @override
+  State<ListveiwOfHabits> createState() => _ListveiwOfHabitsState();
+}
+
+class _ListveiwOfHabitsState extends State<ListveiwOfHabits> {
+  @override
+  Widget build(BuildContext context) {
     return Expanded(
             child: ListView.builder(
+                controller: widget._scrollController,
+              
               itemCount: iconsList.length,
               itemBuilder: (context, index) {
                 return Padding(
@@ -15,3 +26,4 @@ import 'package:habitly/widgets/hapit_widget.dart';
             ),
           );
   }
+}

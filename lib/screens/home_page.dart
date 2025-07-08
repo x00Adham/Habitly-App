@@ -38,7 +38,7 @@ class HomePage extends StatelessWidget {
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
             ),
             SizedBox(height: 5),
-            listveiwOfHabits(),
+            ListveiwOfHabits(),
           ],
         ),
       ),
