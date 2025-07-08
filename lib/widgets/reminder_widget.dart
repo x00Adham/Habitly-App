@@ -23,7 +23,7 @@ class _ReminderWidgetState extends State<ReminderWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 15),
+      padding: const EdgeInsets.symmetric(vertical: 20),
       child: Column(
         children: [
           Row(

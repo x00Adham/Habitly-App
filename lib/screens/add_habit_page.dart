@@ -5,6 +5,7 @@ import 'package:habitly/widgets/frequency_widget.dart';
 import 'package:habitly/widgets/icons_grid.dart';
 import 'package:habitly/widgets/my_container.dart';
 import 'package:habitly/widgets/my_text_field.dart';
+import 'package:habitly/widgets/goal_widget.dart';
 import 'package:habitly/widgets/new_habit_bar.dart';
 import 'package:habitly/widgets/reminder_widget.dart';
 
@@ -51,6 +52,7 @@ class _AddHabitPageState extends State<AddHabitPage> {
                   FrequencyWidget(),
                   DaysOfWeekWidget(),
                   ReminderWidget(),
+                  GoalWidget(),
                 ],
               ),
             ],
