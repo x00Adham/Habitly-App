@@ -15,7 +15,7 @@ class _IconsGridState extends State<IconsGrid> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 150,
+      height: 120,
       child: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 5,

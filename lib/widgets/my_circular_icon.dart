@@ -10,15 +10,7 @@ class MyCircleIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     // Find the IconModel from iconsList that matches the provided name.
     final IconModel iconModel = iconsList.firstWhere(
-      (item) => item.name == name,
-      orElse: () {
-        // Handle the case where the name is not found.
-        // For now, let's throw an error.
-        // Alternatively, you could return a default IconModel.
-        throw ArgumentError(
-          'IconModel with name "$name" not found in iconsList.',
-        );
-      },
+      (item) => item.name == (name.isNotEmpty ? name : "arrow"),
     );
 
     return CircleAvatar(
