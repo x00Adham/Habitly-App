@@ -36,6 +36,7 @@ dependencies:
   font_awesome_flutter: ^10.8.0
   scroll_to_hide: ^2.2.1
   toggle_switch: ^2.3.0
+  provider: ^6.0.0 # Added provider
 
 dev_dependencies:
   flutter_lints: ^5.0.0
