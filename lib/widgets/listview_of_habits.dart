@@ -1,9 +1,10 @@
  import 'package:flutter/material.dart';
 import 'package:habitly/constants/icons_list.dart';
 import 'package:habitly/widgets/hapit_widget.dart';
+
 class ListveiwOfHabits extends StatefulWidget {
-   ListveiwOfHabits({super.key});
-    final ScrollController _scrollController = ScrollController();
+  const ListveiwOfHabits({super.key, required this.scrollController});
+  final ScrollController scrollController;
 
   @override
   State<ListveiwOfHabits> createState() => _ListveiwOfHabitsState();
@@ -14,7 +15,7 @@ class _ListveiwOfHabitsState extends State<ListveiwOfHabits> {
   Widget build(BuildContext context) {
     return Expanded(
             child: ListView.builder(
-                controller: widget._scrollController,
+                controller: widget.scrollController,
               
               itemCount: iconsList.length,
               itemBuilder: (context, index) {
